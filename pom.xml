@@ -9,6 +9,19 @@
     <maven.compiler.target>11</maven.compiler.target>
   </properties>
   <version>1.0-SNAPSHOT</version>
+  <profiles>
+    <profile>
+      <id>production</id>
+      <activation>
+        <os>
+          <name>Ubuntu</name>
+          <family>Linux</family>
+          <arch>x64</arch>
+          <version>Ubuntu 22.04.2 LTS</version>
+        </os>
+      </activation>
+    </profile>
+  </profiles>
   <name>Hello Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
